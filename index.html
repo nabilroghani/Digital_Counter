@@ -90,6 +90,27 @@
     
   </div>
 
-  
+  <script>
+    const value = document.querySelector("#value");
+    const increment = document.querySelector("#increment");
+    const decrement = document.querySelector("#decrement");
+    const reset = document.querySelector("#reset");
+    let count = 0;
+    increment.addEventListener("click", function() {
+        count++;
+        value.textContent = count;
+    })
+    decrement.addEventListener('click', function(){
+        if (count > 0) {
+        count--;
+        value.textContent = count;
+  }
+    })
+    reset.addEventListener('click', function(){
+        count = 0;
+        value.textContent = count;
+    })
+    
+  </script>
 </body>
 </html>
